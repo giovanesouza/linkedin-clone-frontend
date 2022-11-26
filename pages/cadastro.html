@@ -2,13 +2,15 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="shortcut icon" href="../assets/images/icon.ico" type="image/x-icon">
+    <!-- ICON LINKEDIN - ABA -->
+    <link rel="shortcut icon" href="../assets/images/icon.ico" type="image/x-icon" />
 
-    <link rel="stylesheet" href="../assets/css/cadastro.css">
+    <!-- CSS EXTERNO -->
+    <link rel="stylesheet" href="../assets/css/cadastro.css" />
 
     <title>Cadastre-se | LinkedIn</title>
 </head>
@@ -17,50 +19,129 @@
 
     <header>
         <div class="container">
-            <img src="../assets/images/logo.png" alt="">
+            <img src="../assets/images/logo.png" alt="Logo LinkedIn">
         </div>
     </header>
 
-
+    <div class="registration-title">
+        <h1>Aproveite sua vida profissional ao máximo</h1>
+    </div>
 
     <section id="registration">
 
-        <div class="registration-title">
-            <h1>Aproveite sua vida profissional ao máximo</h1>
-        </div>
-
+        <div class="register">
 
             <form action="" method="">
-
                 <label for="user">E-mail ou número de telefone <br />
-
-
-                    <input type="text" name="user" id="user" required/>
+                    <input type="text" name="user" id="user" minlength="11" required />
                 </label>
-
                 <br />
-
                 <label>Senha (6 a 20 caracteres) <br />
-                    <input type="password" name="password" id="password" required/>
+                    <input type="password" name="password" id="password" minlength="6" maxlength="20" required />
                 </label>
-
+               
                 <p>Ao clicar em Aceite e cadastre-se, você aceita o <a href="">Contrato do Usuário</a>, a <a
                         href="">Política de Privacidade</a> e
                     a <a href="">Política de Cookies</a> do LinkedIn.</p>
 
-
-                <input type="submit" value="Aceite e Cadastre-se">
+                <input type="submit" value="Aceite e Cadastre-se" />
 
             </form>
 
+            <div class="option">
+                <span class="line"></span>
+                <span>ou</span>
+                <span class="line"></span>
+            </div>
 
-            <!-- <div class="logar">OU</div> -->
+            <div class="login">
+                <a href="#" class="google">
+                    <div>
+                        <img src="../assets/images/google-icon.png" alt="logo Google" /> <span>Continuar com o
+                            Google</span>
+                    </div>
+                </a>
+
+                <div class="linkedin">
+                    <span>Já se cadastrou no LinkedIn? <a href="../index.html" class="login-link">Entre</a> </span>
+                </div>
+
+            </div>
 
 
-...
+        </div>
+
 
     </section>
 
+
+
+    <footer>
+
+
+        <div class="container">
+
+            <nav>
+                <ul>
+
+                    <div class="logo-black-linkedin">
+
+                        <img src="../assets/images/linkedin-black.png" alt="Logo Linkedin Black">
+                        &copy; 2022
+
+                    </div>
+
+                    <a href="#">
+                        <li>Sobre nós</li>
+                    </a>
+
+                    <a href="#">
+                        <li>Acessibilidade</li>
+                    </a>
+
+                    <a href="#">
+                        <li>Contrato do Usuário</li>
+                    </a>
+
+                    <a href="#">
+                        <li>Política de Privacidade do LinkedIn</li>
+                    </a>
+
+                    <a href="#">
+                        <li>Política de Cookies</li>
+                    </a>
+
+                    <a href="#">
+                        <li>Política de Direitos Autorais</li>
+                    </a>
+
+                    <a href="#">
+                        <li>Política de Marca</li>
+                    </a>
+
+                    <a href="#">
+                        <li>Controles de Visitantes</li>
+                    </a>
+
+                    <a href="#">
+                        <li>Diretrizes da Comunidade</li>
+                    </a>
+
+                    <select name="language">
+                        <option value="">Idioma</option>
+                    </select>
+
+                </ul>
+
+
+            </nav>
+
+
+        </div>
+
+
+
+    </footer>
 
 
 
