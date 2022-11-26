@@ -76,9 +76,6 @@ input {
     padding: 1rem;
 } 
 
-input:invalid {
-    border: 0.1rem solid var(--color-error);
-}
 
 input:valid {
     border: 0.1rem solid var(--color-success);
@@ -92,8 +89,6 @@ input[type=submit] {
     height: 5.2rem;
     border: none;
     border-radius: 10rem;
-    padding: 2rem 11.4rem;
-
     cursor: pointer;
 }
 
