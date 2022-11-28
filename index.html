@@ -26,24 +26,103 @@
 
     <section id="login">
 
-        <form action="">
 
-            <h1>Entrar</h1>
-            <p>Acompanhe as novidades do seu mundo profissional</p>
+        <div class="logar">
 
-            <input type="text" name="user" placeholder="E-mail ou Telefone" required />
-            <input type="password" name="password" placeholder="Senha" required />
+            <form action="">
 
-            <a href="#">Esqueceu a senha?</a>
+                <h1>Entrar</h1>
+                <p>Acompanhe as novidades do seu mundo profissional</p>
 
-            <input type="submit" value="Entrar" />
+                <input type="text" name="user" placeholder="E-mail ou Telefone" required />
+                <input type="password" name="password" placeholder="Senha" minlength="6" maxlength="20" required />
 
-        </form>
+                <a href="#" class="forgot-password">Esqueceu a senha?</a>
 
+                <input type="submit" value="Entrar" />
+
+            </form>
+
+
+
+            <div class="option">
+                <span class="line"></span>
+                <span>ou</span>
+                <span class="line"></span>
+            </div>
+
+            <div class="login">
+                <a href="#" class="apple">
+                    <div>
+                        <img src="../assets/images/apple-icon.png" alt="logo Apple" /> <span>Entrar com a Apple</span>
+                    </div>
+                </a>
+
+            </div>
+
+
+
+        </div>
 
     </section>
 
-<span>Novo no LinkedIn? <a href="pages/cadastro.html">Cadastre-se</a></span>
+    <div class="register">Novo no LinkedIn? <a href="pages/cadastro.html">Cadastre-se</a></div>
+
+
+    <footer>
+
+        <div class="container">
+
+            <nav>
+                <ul>
+
+                    <div class="logo-black-linkedin">
+
+                        <img src="../assets/images/linkedin-black.png" alt="Logo Linkedin Black">
+                        &copy; 2022
+
+                    </div>
+
+                    <a href="#">
+                        <li>Contrato do Usuário</li>
+                    </a>
+
+                    <a href="#">
+                        <li>Política de Privacidade do LinkedIn</li>
+                    </a>
+
+                    <a href="#">
+                        <li>Diretrizes da Comunidade</li>
+                    </a>
+
+                    <a href="#">
+                        <li>Política de Cookies</li>
+                    </a>
+
+                    <a href="#">
+                        <li>Política de Direitos Autorais</li>
+                    </a>
+
+                    <a href="#">
+                        <li>Enviar Feedback</li>
+                    </a>
+
+                    <select name="language">
+                        <option value="">Idioma</option>
+                    </select>
+
+                </ul>
+
+
+            </nav>
+
+
+        </div>
+
+
+
+    </footer>
+
 
 
 </body>

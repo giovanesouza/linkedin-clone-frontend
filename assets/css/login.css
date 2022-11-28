@@ -13,6 +13,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    text-decoration: none;
 }
 
 html {
@@ -46,16 +48,273 @@ header img {
 #login {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+/* DIV QUE ENGLOBA O FORM E ENTRAR COM APPLE */
+#login .logar {
+    max-width: 35.7rem;
     background-color: #fff;
-
     padding: 2.4rem;
     border-radius: 0.8rem;
 
     box-shadow: 0 0.4rem 1.2rem var(--color-border);
-    /* 0 4px 12px rgb(0 0 0 / 15%); */
+
 }
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form h1 {
+    font-size: 3.2rem;
+    line-height: 4rem;
+    margin-bottom: 0.1rem;
+}
+
+form p {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* FORMATA TODOS OS INPUTS*/
+[name="user"],
+[name="password"] {
+    font-size: 1.8rem;
+    height: 5.2rem;
+    padding: 2.8rem 1.2rem;
+    margin-bottom: 1.8rem;
+
+    border: 0.1rem solid var(--color-border);
+    border-radius: 0.4rem;
+
+}
+
+[name="password"] {
+    margin-bottom: 0;
+}
+
+
+form .forgot-password {
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: -0.5rem;
+
+    color: var(--blue-logo);
+}
+
+form a.forgot-password:hover {
+    text-decoration: underline;
+    width: max-content;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: #d0e8ff;
+
+}
+
+/* BOTÃO DE ENTRAR */
+input[type=submit] {
+    background-color: var(--blue-logo);
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 400;
+    width: 100%;
+    height: 4.8rem;
+    margin: 0;
+    border: none;
+    border-radius: 2.4rem;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: var(--blue-hover);
+}
+
+
+
+/* ÁREA QUE MOSTRA O TEXTO "OU" COM DUAS UMA LINHA EM CADA LADO */
+.logar .option {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+}
+
+.option span {
+    flex: 1;
+    text-align: center;
+}
+
+#login span.line {
+    flex: 2;
+    background-color: var(--color-line);
+    height: 0.1rem;
+}
+
+
+/* LOGIN COM APPLE */
+.login a.apple {
+    text-decoration: none;
+    color: var(--color-border);
+    font-weight: bold;
+
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 2.5rem;
+}
+
+a.apple img {
+    width: 2rem;
+    margin-right: 1rem;
+}
+
+a.apple div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.6rem;
+    border: 0.2rem solid var(--color-line);
+    border-radius: 2rem;
+    padding: 1rem;
+
+    transition: all 0.2s;
+}
+
+.login a.apple div:hover {
+    color: var(--blue-hover);
+    border: 0.2rem solid rgba(0, 0, 0, 0.4);
+}
+
+.register {
+    margin-top: 3.2rem;
+    margin-bottom: 3.2rem;
+    text-align: center;
+
+}
+
+.register a {
+    padding: 0.5rem;
+    color: var(--blue-logo);
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+.register a:hover {
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: #d0e8ff;
+}
+
+
+/* RODAPÉ */
+footer {
+    display: flex;
+    justify-content: center;
+
+    background-color: #fff;
+    padding: 2rem;
+
+}
+
+
+ul .logo-black-linkedin {
+    font-size: 1.2rem;
+    color: var(--color-border);
+
+}
+
+
+.container nav {
+    width: 100%;
+}
+
+/* ORGANIZAÇÃO DOS LINKS */
+.container ul {
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 1rem;
+
+}
+
+
+.container li,
+a,
+select {
+    list-style-type: none;
+    text-decoration: none;
+
+    font-size: 1.2rem;
+    color: var(--color-border);
+
+}
+
+.container li:hover,
+a:hover,
+select:hover {
+    text-decoration: underline;
+    color: var(--blue-logo);
+
+}
+
+ul select {
+    border: none;
+    cursor: pointer;
+
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1115px) {
+
+    html {
+        font-size: 60%;
+    }
+
+    header img {
+        padding-left: 2.4rem;
+    }
+
+}
+
+
+@media (max-width: 770px) {
+
+    footer {
+        display: none;
+    }
+
+    body {
+        background-color: transparent;
+    }
+
+ }
+
+
+
+@media (max-width: 600px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    #login .logar {
+        box-shadow: none;
+    }
+
+} 
