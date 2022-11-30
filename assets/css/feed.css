@@ -1,0 +1,419 @@
+:root {
+    --bg-body: #f3f2ef;
+    --bg-header: #fff;
+    --color-light: #fff;
+    --color-main: #000;
+    --color-secondary: #666;
+    --bg-search: #eef3f8;
+    --color-notify: #CC1016;
+    --color-premium: #915907;
+    --color-premium-hover: #5c3905;
+
+
+    --color-error: #D13241;
+    --color-success: #269E41;
+    --color-line: #cdcfd2;
+
+    --radius-feed: 1rem;
+}
+
+
+.dark-mode:root {
+    --bg-body: #000000;
+    --bg-header: #1D2226;
+    --color-main: #E9E9EA;
+
+    --color-premium-hover: #F8C77E;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: var(--text-color-black);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--bg-body);
+    height: 100rem;
+
+}
+
+.container {
+    width: 124.4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+header {
+    width: 100vw;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--bg-header);
+
+    position: fixed;
+
+}
+
+
+nav {
+    width: 124.4rem;
+    display: flex;
+    align-items: center;
+}
+
+/* TAMANHO LOGO */
+nav .logo img {
+    width: 3.7rem;
+    height: 3.7rem;
+    background-color: var(--blue-logo);
+
+    margin-right: 0.5rem;
+}
+
+
+/* INPUT DE PESQUISA - ÁREA*/
+nav .search {
+    width: 43.5rem;
+}
+
+/* COLOCA O ICON LUPA DENTRO DO INPUT SEARCH */
+nav .search .material-symbols-outlined {
+    position: absolute;
+    padding: 0.5rem 1rem;
+}
+
+nav .search input {
+    background-color: var(--bg-search);
+    width: 28rem;
+    height: 3.4rem;
+    padding: 0 0.8rem 0 4rem;
+    border-radius: 1rem;
+    border: 0;
+
+    transition: all .5s;
+
+}
+
+/* INPUT FOCADO - AUMENTA LARGURA */
+nav .search input:focus {
+    width: 90%;
+}
+
+/* TAMANHO PADRÃO PARA OS ICONS */
+.menu .material-symbols-outlined {
+    font-size: 2rem;
+}
+
+/* TAMANHO DO MENU EM RELAÇÃO À ÁREA DISPONÍVEL NA NAV */
+nav .menu {
+    width: max-content;
+}
+
+/* ESTILIZAÇÃO LINKS */
+nav .menu a {
+    display: inline-flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    font-size: 1.2rem;
+    color: var(--color-secondary);
+    padding: 1rem;
+
+
+    border-bottom: 0.2rem solid none;
+
+}
+
+.menu a:hover {
+    color: var(--color-main);
+}
+
+.menu a.active {
+    color: var(--color-main);
+    border-bottom: 0.2rem solid var(--color-main);
+
+}
+
+
+a .notifications {
+    position: relative;
+}
+
+/* PERMITE POSICIONAR A NOTIFICAÇÃO EM QUALQUER ÁREA SOBRE/AO REDOR DO ICON */
+.notifications .notify {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-notify);
+    color: var(--color-light);
+
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    width: 1.8rem;
+    height: 1.8rem;
+    padding: 1rem;
+    border-radius: 0.8rem;
+
+
+    position: absolute;
+    top: -0.8rem;
+    right: -1.2rem;
+}
+
+
+.solutions {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 1rem;
+    color: var(--color-secondary);
+    border-left: 0.1rem solid var(--color-line);
+}
+
+/* ÁREA DO LINK PREMIUM */
+.premium {
+    width: 8.7rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+
+    text-decoration: underline;
+}
+
+.premium a {
+    color: var(--color-premium);
+
+}
+
+.premium a:hover {
+    color: var(--color-premium-hover);
+
+}
+
+
+
+
+
+
+
+
+
+
+/* SEÇÃO DO FEED */
+
+section#feed {
+    max-width: 124.4rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-auto-rows: minmax(12.8rem, auto);
+    gap: 2rem;
+    border: 0.1rem solid #269E41;
+}
+
+.aside-left,
+main,
+.aside-right {
+    margin-top: 8rem;
+
+}
+
+
+
+/* ASIDE ESQUERDA */
+.aside-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.aside-left .profile-info,
+.recent-activities {
+    background-color: #269E41;
+    border-radius: var(--radius-feed);
+}
+
+
+
+
+
+
+/* PRINCIPAL */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.post-logged-user {
+    background-color: var(--bg-header);
+    padding: 2rem;
+}
+
+.post-logged-user .start-post {
+    display: flex;
+    align-items: center;
+}
+
+/* AVATAR */
+.post-logged-user .start-post .avatar {
+    font-size: 4.8rem;
+}
+
+/* BTN PARA INICIAR POSTAGEM */
+.post-logged-user .start-post .start {
+    width: 100%;
+    color: var(--color-secondary);
+    border: 0.1rem solid var(--color-secondary);
+    border-radius: 1.6rem;
+    padding: 1rem;
+}
+
+
+/* TIPOS DE POSTAGEM */
+
+.post-type {
+
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.6rem;
+}
+
+.post-type a {
+    display: flex;
+    gap: 1rem;
+
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--color-secondary);
+
+    padding: 1rem 0.5rem;
+    border-radius: var(--radius-feed);
+    /* border: 1rem solid; */
+
+}
+
+.post-type a:hover {
+    background-color: #EBEBEB;
+
+}
+
+
+
+
+
+
+/* POSTAGENS */
+
+
+/* ENGLOBA TODOS OS POSTS */
+/* section.posts {
+
+
+} */
+
+
+/* ENGLOBA UM POST */
+section.posts .post {
+    flex: 1;
+    background-color: var(--bg-header);
+    border-radius: var(--radius-feed);
+    margin-top: 1rem;
+    padding: 2rem;
+
+ 
+}
+
+
+
+
+/* INFORMAÇÕES + AVATAR DE QUEM FEZ A POSTAGEM */
+.post .info-user {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+/* FOTO USUÁRIO */
+.info-user span.avatar {
+    font-size: 4.8rem;
+
+}
+
+
+/* DADOS DO USUÁRIO */
+.info-user .data-user {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.data-user .user-name {
+    font-size: 1.4rem;
+    color: var(--color-main);
+    font-weight: bold;
+
+}
+
+.data-user .user-desc, .time-posted {
+    font-size: 1.2rem;
+    color: var(--color-secondary);
+}
+
+
+
+
+
+
+
+.post-content {
+    max-width: 59.5rem;
+}
+
+.post-content img {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ASIDE DIREITA */
+.aside-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.aside-right .news,
+.ad {
+    background-color: #1D2226;
+    border-radius: var(--radius-feed);
+
+}
