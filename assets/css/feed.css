@@ -260,6 +260,13 @@ main {
     gap: 1rem;
 }
 
+.profile-info, .recent-activities, .post-logged-user, .post, .news, .ad {
+    /* SOMBRA */
+    box-shadow: 0rem -0rem 0.2rem var(--color-secondary);
+
+    border-radius: var(--radius-feed);
+}
+
 
 .post-logged-user {
     background-color: var(--bg-header);
@@ -289,7 +296,6 @@ main {
 /* TIPOS DE POSTAGEM */
 
 .post-type {
-
     display: flex;
     justify-content: space-between;
     margin-top: 1.6rem;
@@ -317,8 +323,6 @@ main {
 
 
 
-
-
 /* POSTAGENS */
 
 
@@ -333,11 +337,8 @@ main {
 section.posts .post {
     flex: 1;
     background-color: var(--bg-header);
-    border-radius: var(--radius-feed);
     margin-top: 1rem;
-    padding: 2rem;
-
- 
+    padding: 2rem; 
 }
 
 
