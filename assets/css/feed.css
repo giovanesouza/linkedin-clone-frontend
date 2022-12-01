@@ -10,6 +10,12 @@
     --color-premium-hover: #5c3905;
 
 
+    --bg-like: #2B7ED2;
+    --bg-aplausos: #5C9C42;
+    --bg-heart: #DF704D;
+    --bg-riso: #79AAB1;
+
+
     --color-error: #D13241;
     --color-success: #269E41;
     --color-line: #cdcfd2;
@@ -260,7 +266,12 @@ main {
     gap: 1rem;
 }
 
-.profile-info, .recent-activities, .post-logged-user, .post, .news, .ad {
+.profile-info,
+.recent-activities,
+.post-logged-user,
+.post,
+.news,
+.ad {
     /* SOMBRA */
     box-shadow: 0rem -0rem 0.2rem var(--color-secondary);
 
@@ -338,7 +349,7 @@ section.posts .post {
     flex: 1;
     background-color: var(--bg-header);
     margin-top: 1rem;
-    padding: 2rem; 
+    padding: 2rem;
 }
 
 
@@ -351,8 +362,11 @@ section.posts .post {
 }
 
 /* FOTO USUÁRIO */
-.info-user span.avatar {
-    font-size: 4.8rem;
+
+
+.info-user img {
+    width: 4.8rem;
+    margin-right: 1rem;
 
 }
 
@@ -371,7 +385,8 @@ section.posts .post {
 
 }
 
-.data-user .user-desc, .time-posted {
+.data-user .user-desc,
+.time-posted {
     font-size: 1.2rem;
     color: var(--color-secondary);
 }
@@ -386,17 +401,98 @@ section.posts .post {
     max-width: 59.5rem;
 }
 
+.post-content p {
+    font-size: 1.4rem;
+    color: var(--color-main);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
 .post-content img {
     width: 100%;
+
+}
+
+
+.post .social-details {
+    flex: 1;
+    margin-top: 0.5rem;
+}
+
+.social-details .interactions,
+.actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.interactions {
+    padding-bottom: 1rem;
+    border-bottom: 0.1rem solid var(--color-line);
+}
+
+
+.likes span {
+    font-size: 1.2rem;
+    color: var(--color-secondary);
+    cursor: pointer;
+}
+
+.likes span:hover {
+    text-decoration: underline;
+    color: var(--color-main);
+
+}
+
+
+/* ICONES DE INTERAÇÕES */
+.likes img {
+    cursor: pointer;
+    filter: drop-shadow(0 0 0.2rem var(--bg-heart));
+}
+
+.likes img:hover {
+ transform: scale(1.2);
 }
 
 
 
+.social-details .interaction {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    color: var(--color-secondary);
+}
+
+.social-details .interaction .link:hover {
+    color: var(--color-main);
+    text-decoration: underline;
+    cursor: pointer;
+}
 
 
+.social-details .actions {
+    margin-top: 1.6rem;
+}
 
+.social-details .actions a {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 1rem 0.5rem;
+    color: var(--color-secondary);
 
+}
 
+.social-details .actions a:hover {
+    padding: 1rem 0.5rem;
+    border-radius: 1rem;
+    background-color: var(--bg-body);
+
+}
 
 
 
