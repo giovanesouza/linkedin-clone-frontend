@@ -10,6 +10,8 @@
     --color-premium-hover: #5c3905;
 
 
+    --color-logo: #0077B5;
+
     --bg-like: #2B7ED2;
     --bg-aplausos: #5C9C42;
     --bg-heart: #DF704D;
@@ -70,6 +72,7 @@ header {
     background-color: var(--bg-header);
 
     position: fixed;
+    z-index: 999;
 
 }
 
@@ -226,7 +229,7 @@ section#feed {
     max-width: 124.4rem;
     margin: auto;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 25rem 1fr 30.5rem;
     grid-auto-rows: minmax(12.8rem, auto);
     gap: 2rem;
     border: 0.1rem solid #269E41;
@@ -241,18 +244,308 @@ main,
 
 
 
+
+
+/* estou mexendo AQUI */
+
+
+
 /* ASIDE ESQUERDA */
+.aside-left .profile-info,
+.recent-activities {
+    background-color: var(--bg-header);
+    border-radius: var(--radius-feed);
+}
+
 .aside-left {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.aside-left .profile-info,
-.recent-activities {
-    background-color: #269E41;
-    border-radius: var(--radius-feed);
+
+.profile-info .banner {
+    background-color: var(--color-logo);
+    /* background-image: url('../../media/img-post.jpg'); */
+    background-size: cover;
+    background-position: top;
+    border-radius: 1rem 1rem 0 0;
+    height: 6rem;
+
+    /* position: relative; */
 }
+
+.profile-info .banner img {
+
+    width: 7.5rem;
+    height: 7.5rem;
+
+    /* position: absolute;
+    top: 5%;
+    left: 10rem; */
+    border: 0.2rem solid var(--bg-header);
+    border-radius: 50%;
+
+}
+
+
+/* INFO. USUÁRIO: NOME E DESCRIÇÃO */
+.profile-info .user-info {
+    text-align: center;
+    padding: 10rem 5rem;
+
+
+    border-bottom: 0.1rem solid var(--color-line);
+
+}
+
+.profile-info .user-info a,
+span {
+    display: inline-block;
+
+}
+
+.profile-info .user-info a {
+    font-size: 1.6rem;
+    color: var(--color-main);
+    font-weight: bold;
+    margin-bottom: 1rem;
+
+}
+
+.profile-info .user-info a:hover {
+    text-decoration: underline;
+}
+
+.profile-info .user-info span {
+
+    font-size: 1.2rem;
+    color: var(--color-secondary);
+
+}
+
+
+
+.profile-info .profile-visits,
+.profile-info .exclusive-tools,
+.profile-info .my-items {
+    padding: 1.6rem 0;
+    font-size: 1.2rem;
+
+    border-bottom: 0.1rem solid var(--color-line);
+}
+
+
+/* VISITAS - CONTABILIZAÇÃO */
+.profile-visits .visit-text a {
+    display: inline-flex;
+    justify-content: space-between;
+    font-weight: bold;
+    width: 100%;
+
+    padding: 0.5rem 1.6rem;
+
+}
+
+.visit-text a:hover {
+    background-color: var(--color-line);
+}
+
+.profile-visits .visit-text .text {
+    color: var(--color-main);
+}
+
+.profile-visits .visit-text .value {
+    color: var(--color-logo);
+}
+
+
+
+
+
+
+/* FERRAMENTAS EXCLUSIVAS */
+
+.profile-info .exclusive-tools {
+    padding: 0;
+}
+
+.profile-info .exclusive-tools a {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: bold;
+    width: 100%;
+
+    padding: 2rem 1.6rem;
+}
+
+.profile-info .exclusive-tools a:hover {
+    background-color: var(--color-line);
+}
+
+.exclusive-tools a span:first-child {
+    color: var(--color-secondary);
+}
+
+.exclusive-tools a .link {
+    color: var(--color-main);
+    text-decoration: underline;
+}
+
+.exclusive-tools a .link:hover {
+    color: var(--color-premium-hover);
+}
+
+.exclusive-tools a .link::before {
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+    background-color: var(--color-premium);
+}
+
+
+
+/* MEUS ITENS */
+.profile-info .my-items {
+    padding: 0;
+}
+
+.profile-info .my-items a {
+    display: inline-flex;
+    gap: 0.5rem;
+
+    font-weight: bold;
+    width: 100%;
+
+    color: var(--color-secondary);
+    padding: 1.6rem;
+}
+
+.my-items a:hover {
+    background-color: var(--color-line);
+}
+
+
+
+
+/* ATIVIDADES RECENTES */
+
+.recent-activities {
+    position: sticky;
+    top: 8rem;
+
+}
+
+.recent-activities details,
+.events,
+.follow-hashtags {
+    padding: 1.6rem 0;
+}
+
+
+summary {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.recent-activities .group {
+    color: var(--color-logo);
+}
+
+
+.details ul,
+li {
+    list-style: none;
+}
+
+details ul a {
+    padding: 0.5rem 1.6rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-secondary);
+
+    display: inline-flex;
+    align-items: center;
+    gap: 0 1rem;
+    width: 100%;
+}
+
+details ul a .material-symbols-outlined {
+    font-size: 1.6rem;
+}
+
+details ul a:hover {
+    background-color: var(--color-line);
+}
+
+
+.events,
+.follow-hashtags,
+.find-more {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.5rem 1.6rem;
+    color: var(--color-logo);
+}
+
+.events a:hover,
+.follow-hashtags a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* SIMBOLO DE + */
+
+.events a {
+    padding: 0.5rem 0;
+}
+
+.events .plus {
+    padding: 0.5rem 1rem;
+
+}
+
+.events .plus:hover {
+    background-color: var(--color-line);
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+}
+
+
+.find-more {
+    padding: 0;
+    border-top: 0.1rem solid var(--color-line);
+}
+
+.find-more a {
+    width: 100%;
+
+    text-align: center;
+    padding: 1.6rem;
+}
+
+.find-more a:hover {
+    background-color: var(--color-line);
+}
+
+
+
+.find-more,
+span.plus {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--color-secondary);
+}
+
 
 
 
@@ -313,6 +606,7 @@ main {
 }
 
 .post-type a {
+
     display: flex;
     gap: 1rem;
 
@@ -324,6 +618,11 @@ main {
     border-radius: var(--radius-feed);
     /* border: 1rem solid; */
 
+}
+
+.post-type a img {
+    width: 2.4rem;
+    height: 2.4rem;
 }
 
 .post-type a:hover {
@@ -352,6 +651,10 @@ section.posts .post {
     padding: 2rem;
 }
 
+/* DEIXA A ÚLTIMA POSTAGEM COM MARGIN DA PARTE INFERIOR DA PÁGINA */
+section.posts .post:last-child {
+    margin-bottom: 2rem;
+}
 
 
 
@@ -408,7 +711,8 @@ section.posts .post {
     margin-bottom: 1rem;
 }
 
-.post-content img {
+.post-content img,
+video {
     width: 100%;
 
 }
@@ -433,7 +737,7 @@ section.posts .post {
 
 
 .likes span {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     color: var(--color-secondary);
     cursor: pointer;
 }
@@ -447,12 +751,13 @@ section.posts .post {
 
 /* ICONES DE INTERAÇÕES */
 .likes img {
+    width: 1.6rem;
     cursor: pointer;
     filter: drop-shadow(0 0 0.2rem var(--bg-heart));
 }
 
 .likes img:hover {
- transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 
