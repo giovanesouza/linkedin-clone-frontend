@@ -16,6 +16,9 @@
     <!-- CSS EXTERNO -->
     <link rel="stylesheet" href="../assets/css/feed.css" />
 
+    <!-- JS EXTERNO -->
+    <script src="../assets/js/darkMode.js" defer></script>
+
     <title>Feed | LinkedIn </title>
 </head>
 
@@ -27,7 +30,7 @@
         <nav>
 
             <div class="logo">
-                <img src="../assets/images/logo-feed.png" alt="">
+                <!-- <img src="../assets/images/logo-feed.png" alt="" /> -->
             </div>
 
             <!-- BOTÃO DE PESQUISA -->
@@ -124,9 +127,11 @@
 
 
                 <a href="">
-                    <span class="material-symbols-outlined">
+                    <!-- <span class="material-symbols-outlined">
                         account_circle
-                    </span>
+                    </span> -->
+
+                    <img src="../media/homem3.png" class="photo-user" alt="Foto Usuário" />
 
                     Eu &#9662;
                 </a>
@@ -165,7 +170,9 @@
 
                 <div class="banner">
 
-                    <div class="img"><img src="../media/homem3.png" /></div>
+                    <div class="img">
+                        <img src="../media/homem3.png" />
+                    </div>
 
                 </div>
 
@@ -207,6 +214,11 @@
 
 
             </aside>
+
+
+            <!-- APARECE APENAS EM TELAS < 778px -->
+            <div class="show-more">Exibir mais &#9662;</div>
+
 
 
             <!-- ATIVIDADES RECENTES -->
@@ -296,6 +308,10 @@
 
                 <div class="find-more"><a href="">Descubra mais</a></div>
 
+                <div class="dark-mode-button">
+                    <label><input type="checkbox" id="switch" />Dark Mode</label>
+                </div>
+
             </aside>
 
         </div>
@@ -309,9 +325,11 @@
 
                 <!-- INICIA UMA POSTAGEM - GERAL -->
                 <div class="start-post">
-                    <span class="material-symbols-outlined avatar">
+
+                    <img class="avatar" src="../media/homem3.png" />
+                    <!-- <span class="material-symbols-outlined avatar">
                         account_circle
-                    </span>
+                    </span> -->
 
                     <a href="" class="start">Começar publicação</a>
                 </div>
@@ -321,23 +339,25 @@
                 <div class="post-type">
 
                     <a href="">
-                        <img src="../assets/images/photo-icon.png" alt="Icon Foto" /> Foto
-
+                        <span class="material-symbols-outlined photo">image</span>
+                        Foto
                     </a>
 
                     <a href="">
-                        <img class="video-icon" src="../assets/images/video-icon.png" alt="Icon Vídeo" /> Vídeo
 
+                        <span class="material-symbols-outlined video">slideshow</span>
+                        Vídeo
                     </a>
 
                     <a href="">
-                        <img src="../assets/images/event-icon.png" alt="Icon Evento" /> Evento
-
+                        <span class="material-symbols-outlined event">calendar_month</span>
+                        Evento
                     </a>
 
                     <a href="">
-                        <img src="../assets/images/article-icon.png" alt="Icon Escrever artigo" /> Escrever artigo
 
+                        <span class="material-symbols-outlined article">newspaper</span>
+                        Escrever artigo
                     </a>
 
 
@@ -391,12 +411,20 @@
 
                             <div class="likes">
 
-                                <img id="like" src="../media/like-icon.png" />
-                                <img id="aplausos" src="../media/palmas-icon.png" />
-                                <img src="../media/heart-icon.png" />
-                                <img src="../media/riso-icon.png" />
+                                <span class="material-symbols-outlined like">thumb_up_off</span>
 
-                                <img src="../media/genial-icon.png" />
+                                <span class="material-symbols-outlined heart">
+                                    favorite
+                                </span>
+
+                                <span class="material-symbols-outlined laugh">
+                                    sentiment_very_satisfied
+                                </span>
+
+                                <span class="material-symbols-outlined idea">
+                                    tips_and_updates
+                                </span>
+
 
                                 <!-- TOTAL INTERAÇÕES -->
                                 <span class="all-interactions">520</span>
@@ -415,15 +443,25 @@
 
                         <div class="actions">
 
-                            <a href=""><img src="../media/like.png" /> Gostei</a>
+                            <a href="">
+                                <span class="material-symbols-outlined">thumb_up_off</span>
+                                Gostei
+                            </a>
 
-                            <a href=""><img src="../media/comente-icon.png" /> Comentar</a>
+                            <a href="">
+                                <span class="material-symbols-outlined">chat</span>
+                                Comentar
+                            </a>
 
-                            <a href=""><img src="../media/compartilhar.png" /> Compartilhar</a>
+                            <a href="">
+                                <span class="material-symbols-outlined">share</span>
+                                Compartilhar
+                            </a>
 
-                            <a href=""><img src="../media/enviar-icon.png" /> Enviar</a>
-
-
+                            <a href="">
+                                <span class="material-symbols-outlined">send</span>
+                                Enviar
+                            </a>
 
                         </div>
                     </div>
@@ -467,12 +505,20 @@
 
                             <div class="likes">
 
-                                <img id="like" src="../media/like-icon.png" />
-                                <img id="aplausos" src="../media/palmas-icon.png" />
-                                <img src="../media/heart-icon.png" />
-                                <img src="../media/riso-icon.png" />
+                                <span class="material-symbols-outlined like">thumb_up_off</span>
 
-                                <img src="../media/genial-icon.png" />
+                                <span class="material-symbols-outlined heart">
+                                    favorite
+                                </span>
+
+                                <span class="material-symbols-outlined laugh">
+                                    sentiment_very_satisfied
+                                </span>
+
+                                <span class="material-symbols-outlined idea">
+                                    tips_and_updates
+                                </span>
+
 
                                 <!-- TOTAL INTERAÇÕES -->
                                 <span class="all-interactions">520</span>
@@ -491,15 +537,25 @@
 
                         <div class="actions">
 
-                            <a href=""><img src="../media/like.png" /> Gostei</a>
+                            <a href="">
+                                <span class="material-symbols-outlined">thumb_up_off</span>
+                                Gostei
+                            </a>
 
-                            <a href=""><img src="../media/comente-icon.png" /> Comentar</a>
+                            <a href="">
+                                <span class="material-symbols-outlined">chat</span>
+                                Comentar
+                            </a>
 
-                            <a href=""><img src="../media/compartilhar.png" /> Compartilhar</a>
+                            <a href="">
+                                <span class="material-symbols-outlined">share</span>
+                                Compartilhar
+                            </a>
 
-                            <a href=""><img src="../media/enviar-icon.png" /> Enviar</a>
-
-
+                            <a href="">
+                                <span class="material-symbols-outlined">send</span>
+                                Enviar
+                            </a>
 
                         </div>
                     </div>
@@ -542,12 +598,19 @@
 
                             <div class="likes">
 
-                                <img id="like" src="../media/like-icon.png" />
-                                <img id="aplausos" src="../media/palmas-icon.png" />
-                                <img src="../media/heart-icon.png" />
-                                <img src="../media/riso-icon.png" />
+                                <span class="material-symbols-outlined like">thumb_up_off</span>
 
-                                <img src="../media/genial-icon.png" />
+                                <span class="material-symbols-outlined heart">
+                                    favorite
+                                </span>
+
+                                <span class="material-symbols-outlined laugh">
+                                    sentiment_very_satisfied
+                                </span>
+
+                                <span class="material-symbols-outlined idea">
+                                    tips_and_updates
+                                </span>
 
                                 <!-- TOTAL INTERAÇÕES -->
                                 <span class="all-interactions">520</span>
@@ -566,15 +629,25 @@
 
                         <div class="actions">
 
-                            <a href=""><img src="../media/like.png" /> Gostei</a>
+                            <a href="">
+                                <span class="material-symbols-outlined">thumb_up_off</span>
+                                Gostei
+                            </a>
 
-                            <a href=""><img src="../media/comente-icon.png" /> Comentar</a>
+                            <a href="">
+                                <span class="material-symbols-outlined">chat</span>
+                                Comentar
+                            </a>
 
-                            <a href=""><img src="../media/compartilhar.png" /> Compartilhar</a>
+                            <a href="">
+                                <span class="material-symbols-outlined">share</span>
+                                Compartilhar
+                            </a>
 
-                            <a href=""><img src="../media/enviar-icon.png" /> Enviar</a>
-
-
+                            <a href="">
+                                <span class="material-symbols-outlined">send</span>
+                                Enviar
+                            </a>
 
                         </div>
                     </div>
@@ -618,12 +691,19 @@
 
                             <div class="likes">
 
-                                <img id="like" src="../media/like-icon.png" />
-                                <img id="aplausos" src="../media/palmas-icon.png" />
-                                <img src="../media/heart-icon.png" />
-                                <img src="../media/riso-icon.png" />
+                                <span class="material-symbols-outlined like">thumb_up_off</span>
 
-                                <img src="../media/genial-icon.png" />
+                                <span class="material-symbols-outlined heart">
+                                    favorite
+                                </span>
+
+                                <span class="material-symbols-outlined laugh">
+                                    sentiment_very_satisfied
+                                </span>
+
+                                <span class="material-symbols-outlined idea">
+                                    tips_and_updates
+                                </span>
 
                                 <!-- TOTAL INTERAÇÕES -->
                                 <span class="all-interactions">520</span>
@@ -642,15 +722,25 @@
 
                         <div class="actions">
 
-                            <a href=""><img src="../media/like.png" /> Gostei</a>
+                            <a href="">
+                                <span class="material-symbols-outlined">thumb_up_off</span>
+                                Gostei
+                            </a>
 
-                            <a href=""><img src="../media/comente-icon.png" /> Comentar</a>
+                            <a href="">
+                                <span class="material-symbols-outlined">chat</span>
+                                Comentar
+                            </a>
 
-                            <a href=""><img src="../media/compartilhar.png" /> Compartilhar</a>
+                            <a href="">
+                                <span class="material-symbols-outlined">share</span>
+                                Compartilhar
+                            </a>
 
-                            <a href=""><img src="../media/enviar-icon.png" /> Enviar</a>
-
-
+                            <a href="">
+                                <span class="material-symbols-outlined">send</span>
+                                Enviar
+                            </a>
 
                         </div>
                     </div>
@@ -690,12 +780,20 @@
 
                             <div class="likes">
 
-                                <img id="like" src="../media/like-icon.png" />
-                                <img id="aplausos" src="../media/palmas-icon.png" />
-                                <img src="../media/heart-icon.png" />
-                                <img src="../media/riso-icon.png" />
+                                <span class="material-symbols-outlined like">thumb_up_off</span>
 
-                                <img src="../media/genial-icon.png" />
+                                <span class="material-symbols-outlined heart">
+                                    favorite
+                                </span>
+
+                                <span class="material-symbols-outlined laugh">
+                                    sentiment_very_satisfied
+                                </span>
+
+                                <span class="material-symbols-outlined idea">
+                                    tips_and_updates
+                                </span>
+
 
                                 <!-- TOTAL INTERAÇÕES -->
                                 <span class="all-interactions">520</span>
@@ -714,13 +812,25 @@
 
                         <div class="actions">
 
-                            <a href=""><img src="../media/like.png" /> Gostei</a>
+                            <a href="">
+                                <span class="material-symbols-outlined">thumb_up_off</span>
+                                Gostei
+                            </a>
 
-                            <a href=""><img src="../media/comente-icon.png" /> Comentar</a>
+                            <a href="">
+                                <span class="material-symbols-outlined">chat</span>
+                                Comentar
+                            </a>
 
-                            <a href=""><img src="../media/compartilhar.png" /> Compartilhar</a>
+                            <a href="">
+                                <span class="material-symbols-outlined">share</span>
+                                Compartilhar
+                            </a>
 
-                            <a href=""><img src="../media/enviar-icon.png" /> Enviar</a>
+                            <a href="">
+                                <span class="material-symbols-outlined">send</span>
+                                Enviar
+                            </a>
 
 
 
@@ -746,10 +856,74 @@
         <div class="aside-right">
 
             <!-- NOTÍCIAS -->
-            <aside class="news">RIGHT</aside>
+            <aside class="news">
+
+                <div class="news-title">LinkedIn Notícias <span>i</span></div>
+
+                <div class="news-body">
+
+                    <a href="">
+                        <span class="new">● Lorem ipsum dolor sit amet...</span>
+                        <span class="hour-readers">há 8h ● 4.298 leitores</span>
+                    </a>
+
+                    <a href="">
+                        <span class="new">● Lorem ipsum dolor sit amet...</span>
+                        <span class="hour-readers">há 10h ● 4.598 leitores</span>
+                    </a>
+
+                    <a href="">
+                        <span class="new">● Lorem ipsum dolor sit amet...</span>
+                        <span class="hour-readers">há 2h ● 6.523 leitores</span>
+                    </a>
+
+                    <a href="">
+                        <span class="new">● Lorem ipsum dolor sit amet...</span>
+                        <span class="hour-readers">há 7h ● 10.013 leitores</span>
+                    </a>
+
+
+                    <a href="" class="see-more">
+                        Exibir mais &#9662;
+                    </a>
+
+
+
+
+                </div>
+
+
+
+
+            </aside>
 
             <!-- ANÚNCIOS -->
-            <aside class="ad">...</aside>
+            <aside class="ad">
+
+                <div class="ad-title">Anúncio <span>...</span></div>
+
+                <div class="ad-body">
+                    <div class="ad-text">Nome, alcance todo o seu potencial com o LinkedIn Premium
+                    </div>
+
+                    <div class="images">
+                        <img src="../media/homem3.png" alt="Foto Usuário" />
+                        <img src="../media/add-premium.png" alt="Foto Anúncio" />
+
+
+                    </div>
+
+                    <div class="know-more">Saiba quem viu seu perfil nos últimos 90 dias</div>
+
+
+                    <a href="" class="button">Experimente grátis</a>
+
+                </div>
+
+
+
+
+            </aside>
 
         </div>
 
