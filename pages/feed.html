@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- ICON LINKEDIN - ABA -->
-    <link rel="shortcut icon" href="../assets/images/icon.png" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- GOOGLE ICON -->
     <link rel="stylesheet"
@@ -19,22 +16,25 @@
     <!-- JS EXTERNO -->
     <script src="../assets/js/darkMode.js" defer></script>
 
-    <title>Feed | LinkedIn </title>
+
+    <title>Feed | LinkedIn</title>
 </head>
 
 <body>
 
+
+
     <!-- CABEÇALHO -->
     <header>
 
-        <nav>
+        <div class="logo">
+            <!-- <img src="../assets/images/logo-feed.png" alt="" /> -->
+        </div>
 
-            <div class="logo">
-                <!-- <img src="../assets/images/logo-feed.png" alt="" /> -->
-            </div>
+        <!-- BOTÃO DE PESQUISA -->
+        <div class="search">
 
-            <!-- BOTÃO DE PESQUISA -->
-            <div class="search">
+            <form action="">
 
                 <!-- ICON LUPA -->
                 <span class="material-symbols-outlined">
@@ -43,123 +43,89 @@
 
                 <input type="search" name="search" placeholder="Pesquisar" />
 
+            </form>
 
-            </div>
+        </div>
 
 
-            <div class="menu">
 
+
+        <div class="menu">
+
+            <nav>
                 <a href="" class="active">
-
                     <div class="notifications">
-
                         <div class="notify">&#9679;</div>
-
                         <span class="material-symbols-outlined">
                             house
                         </span>
-
                     </div>
-
                     Início
                 </a>
-
                 <a href="">
-
                     <div class="notifications">
-
                         <div class="notify">15</div>
                         <span class="material-symbols-outlined">
                             group
                         </span>
-
                     </div>
-
-
                     Minha Rede
                 </a>
-
                 <a href="">
-
                     <div class="notifications">
-
                         <div class="notify">50</div>
-
                         <span class="material-symbols-outlined">
                             work
                         </span>
                     </div>
-
                     Vagas
                 </a>
-
                 <a href="">
-
                     <div class="notifications">
-
                         <div class="notify">10</div>
-
                         <span class="material-symbols-outlined">
                             sms
                         </span>
-
                     </div>
-
-
                     Mensagens
                 </a>
-
                 <a href="">
                     <div class="notifications">
-
                         <div class="notify">25</div>
-
                         <span class="material-symbols-outlined">
                             notifications
                         </span>
-
                     </div>
-
                     Notificações
-
-
                 </a>
-
-
                 <a href="">
-                    <!-- <span class="material-symbols-outlined">
-                        account_circle
-                    </span> -->
-
                     <img src="../media/homem3.png" class="photo-user" alt="Foto Usuário" />
-
                     Eu &#9662;
                 </a>
 
-
-                <div class="solutions">
-
+                <!-- <div class="solutions"> -->
                     <a href="">
                         <span class="material-symbols-outlined">
                             apps
                         </span>
                         Soluções &#9662;
                     </a>
+                <!-- </div> -->
 
-                </div>
 
-            </div>
+            </nav>
+        </div>
 
-            <div class="premium">
-                <a href="">Experimente o Premium grátis</a>
-            </div>
+        <div class="premium">
+            <a href="">Experimente o Premium grátis</a>
+        </div>
 
-        </nav>
 
     </header>
 
 
-    <!-- FEED -->
+
+
     <section id="feed">
 
         <!-- LATERAL ESQUERDA -->
@@ -214,12 +180,6 @@
 
 
             </aside>
-
-
-            <!-- APARECE APENAS EM TELAS < 778px -->
-            <div class="show-more">Exibir mais &#9662;</div>
-
-
 
             <!-- ATIVIDADES RECENTES -->
             <aside class="recent-activities">
@@ -317,6 +277,14 @@
         </div>
 
 
+
+
+
+        <!-- APARECE APENAS EM TELAS < 778px -->
+        <div class="show-more">Exibir mais &#9662;</div>
+
+
+
         <!-- CENTRAL -->
         <main>
 
@@ -373,6 +341,7 @@
             <section class="posts">
 
 
+
                 <article class="post">
 
                     <div class="info-user">
@@ -388,7 +357,16 @@
                         <div class="data-user">
                             <span class="user-name">Richard Fernand</span>
                             <span class="user-desc">UI Design</span>
-                            <span class="time-posted">3 h</span>
+
+                            <span class="time-posted">3 h <span>●</span>
+                                
+                                
+                                <span class="material-symbols-outlined">
+                                    public
+                                    </span>
+
+
+                            </span>
 
                         </div>
 
@@ -484,7 +462,18 @@
                         <div class="data-user">
                             <span class="user-name">Cristhina Angel</span>
                             <span class="user-desc">Tech Lead</span>
-                            <span class="time-posted">1 h</span>
+
+                            <span class="time-posted">1 h <span>●</span>
+                                
+                                
+                            <span class="material-symbols-outlined">
+                                public
+                                </span>
+
+
+                        </span>
+
+
 
                         </div>
 
@@ -493,7 +482,7 @@
 
                     <!-- IMAGEM/VÍDEO/TEXTO -->
                     <div class="post-content">
-                        <p>Em breve estaremos lançando o nosso novo app. Aguardem!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic rem corrupti, excepturi fugit dicta doloribus labore sequi ratione.</p>
                         <video src="../media/cell.mp4" controls></video>
                     </div>
 
@@ -577,7 +566,16 @@
                         <div class="data-user">
                             <span class="user-name">Marco Francis</span>
                             <span class="user-desc">CEO - Software American</span>
-                            <span class="time-posted">10 h</span>
+                            
+                            <span class="time-posted">10 h <span>●</span>
+                                
+                                
+                                <span class="material-symbols-outlined">
+                                    groups_2
+                                    </span>
+
+
+                            </span>
 
                         </div>
 
@@ -586,7 +584,8 @@
 
                     <!-- IMAGEM/VÍDEO/TEXTO -->
                     <div class="post-content">
-                        <img src="../media/img-post.jpg" />
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quas quis esse excepturi quaerat quibusdam velit quae, temporibus repudiandae cumque at recusandae ratione dicta sint distinctio, nobis facilis, harum molestiae?</p>
+                        <img src="../media/post-soft-american.jpg" />
                     </div>
 
 
@@ -668,7 +667,17 @@
                         <div class="data-user">
                             <span class="user-name">Mariette Stain</span>
                             <span class="user-desc">Dev. Full Stack</span>
-                            <span class="time-posted">1 h</span>
+                            
+                            <span class="time-posted">1 h <span>●</span>
+                                
+                                
+                                <span class="material-symbols-outlined">
+                                    public
+                                    </span>
+
+
+                            </span>
+
 
                         </div>
 
@@ -677,7 +686,7 @@
 
                     <!-- IMAGEM/VÍDEO/TEXTO -->
                     <div class="post-content">
-                        <p>Hoje é um dia de muita alegria, pois estou colando grau e recebendo a minha certificação.
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...
                         </p>
                         <img src="../media/certificado.jpg" />
                     </div>
@@ -760,7 +769,16 @@
                         <div class="data-user">
                             <span class="user-name">Nome Usuário</span>
                             <span class="user-desc">Dev. Full Stack</span>
-                            <span class="time-posted">1 h</span>
+                           
+                            <span class="time-posted">1 h <span>●</span>
+                                
+                                
+                                <span class="material-symbols-outlined">
+                                    groups_2
+                                    </span>
+
+
+                            </span>
 
                         </div>
 
@@ -769,7 +787,8 @@
 
                     <!-- IMAGEM/VÍDEO/TEXTO -->
                     <div class="post-content">
-                        <img src="../media/img-post.jpg" />
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae eaque dolorem consequuntur et. Unde adipisci inventore iure ad minus ipsam at, quidem, impedit vitae ut similique, incidunt porro vero omnis!</p>
+                        <img src="../media/women.jpg" />
                     </div>
 
 
@@ -840,15 +859,14 @@
 
                 </article>
 
-
-
-
-
-
+                
             </section>
 
 
         </main>
+
+
+
 
 
 
@@ -929,8 +947,6 @@
 
 
     </section>
-
-
 
 
 </body>
