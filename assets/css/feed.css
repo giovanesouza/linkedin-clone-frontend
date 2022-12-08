@@ -494,7 +494,12 @@ span {
     background-color: var(--color-line);
 }
 
-
+/* Icon */
+.my-items .icon-item {
+    width: 1rem;
+    height: 2rem;
+    background-color: var(--color-secondary);
+}
 
 
 /* ATIVIDADES RECENTES */
@@ -1158,24 +1163,106 @@ video {
     display: none;
     text-align: center;
     font-size: 1.6rem;
-    color: var(--color-main);
+    color: #000;
     padding: 0.5rem 0;
     margin-bottom: 0.5rem;
+    
+    border: 0;
     border-radius: 0.5rem;
     cursor: pointer;
 }
 
 .show-more:hover {
     background-color: #ccc;
-    color: #000;
+
 }
 
 
 
 /* CHAT */
-/* AINDA SERÁ DESENVOLVIDO */
+.chat {
+    background-color: var(--bg-header);
+    width: 28.8rem;
+    font-size: 1.4rem;
+    color: var(--color-main);
+    font-weight: 600;
 
 
+    display: flex;
+    justify-content: space-between;
+
+    padding: 1rem;
+    border-radius: 1rem 1rem 0 0;
+
+    box-shadow: 0rem -0rem 0.2rem var(--color-secondary);
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+    z-index: 999;
+
+    cursor: pointer;
+}
+
+/* Engloba foto e texto msg */
+.chat .chat-user {
+    display: flex;
+    align-items: center;
+    gap: 0 1rem;
+
+}
+
+/* AVATAR DO USUÁRIO */
+.chat .chat-user img {
+    width: 3.2rem;
+    height: 3.2rem;
+
+
+}
+
+
+.chat-user .online {
+    width: 1rem;
+    height: 1rem;
+    background-color: #269E41;
+    border: 0.1rem solid #fff;
+    border-radius: 50%;
+
+    margin-top: 2rem;
+    margin-left: -2rem;
+}
+
+
+.chat-options {
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    /* gap: 1.6rem; */
+
+    color: var(--color-secondary);
+
+
+
+}
+
+.chat-options .material-symbols-outlined {
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.chat-options .material-symbols-outlined:hover {
+    background-color: var(--color-line);
+    font-size: 2rem;
+}
+
+
+.display-block {
+    display: block;
+}
 
 /* 2 COLUNAS */
 @media (max-width: 991px) {
@@ -1209,13 +1296,14 @@ video {
         font-size: 60%;
     }
 
+    header {
+        padding: 0.5rem 1rem 0 0.5rem;
+    }
 
     /* OCULTA O TEXTO DOS LINKS */
     .menu nav a {
         font-size: 0;
     }
-
-
 
 
     #feed {
@@ -1244,7 +1332,21 @@ video {
 
     }
 
+
+    /* Oculta o chat */
+    .chat {
+        display: none;
+    }
+
 }
+
+
+
+/* Utilizado para exibir itens com display none - Botão Exibir mais*/
+.display-block {
+    display: block;
+}
+
 
 
 @media (max-width: 600px) {
@@ -1254,7 +1356,7 @@ video {
     }
 
     header {
-        padding: 0 1rem;
+        padding: 0.5rem 1rem 0 0.5rem;
     }
 
     /* Oculta link de Experimentar linkedin Premium e botão de soluções */
