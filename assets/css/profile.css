@@ -1,0 +1,298 @@
+:root {
+    --icon-logo-blue: url('../images/icon-blue.png');
+
+    --bg-body: #f3f2ef;
+    --bg-header: #fff;
+
+
+    --bg-link-hover: #EBEBEB;
+
+    --color-main: #000;
+    --color-secondary: #666;
+
+    --bg-search: #eef3f8;
+
+    /* BG NOTIFY ICON */
+    --bg-notify: #CC1016;
+    --text--color-notify: #fff;
+
+
+    --color-premium: #915907;
+    --color-premium-hover: #5c3905;
+
+
+    --color-logo: #0077B5;
+    --link-blue: #0077B5;
+
+
+    /* MAIN - POST-TYPE*/
+    --color-icon-photo: #70b5f9;
+    --color-icon-video: #7fc15e;
+    --color-icon-event: #e7a33e;
+    --color-icon-article: #f5987e;
+
+
+    /* POST - INTERACTIONS - ACTIONS */
+    --color-icon-like: #2B7ED2;
+    --color-icon-aplause: #5C9C42;
+    --color-icon-heart: #DF704D;
+    --color-icon-laugh: #79AAB1;
+    --color-icon-idea: #f5bb5c;
+
+
+    /* ASIDE RIGHT */
+    --color-button: #0a66c2;
+
+    /* HOVER BTN MODAL */
+    --bg-btn-hover: #004182;
+
+
+    /* --color-error: #D13241;
+    --color-success: #269E41; */
+
+    --color-line: #cdcfd2;
+
+    --radius-feed: 1rem;
+}
+
+
+.dark-mode:root {
+    --icon-logo-blue: url('../images/icon-black.png');
+
+    --bg-body: #000000;
+    --bg-header: #1D2226;
+    --color-main: #E9E9EA;
+
+    --bg-link-hover: #ebebeb10;
+
+    --color-secondary: #75787a;
+    --bg-search: #38434f;
+
+    --color-premium: #e7a33e;
+    --color-premium-hover: #F8C77E;
+
+
+    --color-logo: #e9e9ea;
+    --link-blue: #55b5f9;
+
+    --color-line: #383d40;
+
+    /* ASIDE RIGHT */
+    --color-button: #70b5f9;
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--bg-body);
+    font-size: 1.6rem;
+}
+
+
+
+
+header {
+    width: 100vw;
+    padding: 0 5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--bg-header);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+
+}
+
+
+header .logo-search {
+    display: flex;
+}
+
+/* TAMANHO ÁREA LOGO */
+header .logo {
+    width: 3.7rem;
+    height: 3.7rem;
+    border-radius: 0.5rem;
+    background-color: var(--color-logo);
+    background-image: var(--icon-logo-blue);
+    background-size: cover;
+    background-position: center;
+
+    font-size: 1.6rem;
+    color: var(--bg-body);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 0.5rem;
+}
+
+
+/* INPUT DE PESQUISA - ÁREA*/
+header .search {
+    width: 43.5rem;
+}
+
+/* COLOCA O ICON LUPA DENTRO DO INPUT SEARCH */
+header .search .material-symbols-outlined {
+    position: absolute;
+    padding: 0.5rem 1rem;
+    color: var(--color-main);
+}
+
+header .search input {
+    background-color: var(--bg-search);
+    color: var(--color-main);
+    width: 28rem;
+    height: 3.4rem;
+    padding: 0 0.8rem 0 4rem;
+    border-radius: 1rem;
+    border: 0;
+
+    transition: all .5s;
+
+}
+
+/* INPUT FOCADO - AUMENTA LARGURA */
+header .search input:focus {
+    width: 90%;
+}
+
+
+
+/* TAMANHO PADRÃO PARA OS ICONS */
+.menu nav .material-symbols-outlined {
+    font-size: 2rem;
+
+    /* DEIXA O ICON COM PREENCHIMENTO */
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400
+}
+
+
+nav {
+    max-height: 6rem;
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* ESTILIZAÇÃO LINKS NAV */
+.menu nav a {
+    width: max-content;
+    display: inline-flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    font-size: 1.2rem;
+    color: var(--color-secondary);
+
+    padding: 0.5rem 1rem;
+
+    border-bottom: 0.2rem solid none;
+
+}
+
+.menu nav a:hover {
+    color: var(--color-main);
+}
+
+.menu nav a.active {
+    color: var(--color-main);
+    border-bottom: 0.2rem solid var(--color-main);
+
+}
+
+
+/* NOTIFICAÇÕES */
+a .notifications {
+    position: relative;
+}
+
+
+
+/* PERMITE POSICIONAR A NOTIFICAÇÃO EM QUALQUER ÁREA SOBRE/AO REDOR DO ICON */
+a .notifications .notify {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-notify);
+    color: var(--text--color-notify);
+
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    width: 1.8rem;
+    height: 1.8rem;
+
+    padding: 0.5rem;
+    border-radius: 0.9rem;
+
+
+    position: absolute;
+    top: -0.5rem;
+    right: -1rem;
+}
+
+
+/* .menu nav a.photo-user {
+    padding-right: 5rem;
+} */
+
+.menu nav img.photo-user {
+    width: 2rem;
+}
+
+
+.menu nav .solutions {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 1rem;
+    color: var(--color-secondary);
+    border-left: 0.1rem solid var(--color-line);
+}
+
+/* ÁREA DO LINK PREMIUM */
+header .premium {
+    width: 8.7rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+
+    text-decoration: underline;
+}
+
+header .premium a {
+    color: var(--color-premium);
+
+}
+
+header .premium a:hover {
+    color: var(--color-premium-hover);
+
+}

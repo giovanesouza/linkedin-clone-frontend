@@ -124,6 +124,10 @@ header {
 }
 
 
+header .logo-search {
+    display: flex;
+}
+
 /* TAMANHO ÁREA LOGO */
 header .logo {
     width: 3.7rem;
