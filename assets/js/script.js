@@ -49,3 +49,54 @@ showMore.addEventListener('click', () => {
 
 
 });
+
+
+
+
+// MODAL -  INICIAR POST
+const modal = document.querySelector('#myModal');
+const btnModal = document.querySelector('#myBtn');
+const closeModal = document.querySelector('#close');
+
+// Ativa modal para postagem
+btnModal.addEventListener('click', () => {
+    modal.style.display = 'block';
+});
+
+// Fecha o modal ao clicar no x
+closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+// Fecha o modal ao clicar em qualquer área da página (exeto o próprio modal)
+window.addEventListener('click', (e) => {
+    if(e.target == modal) {
+        modal.style.display = 'none';
+    }
+});
+
+
+
+
+
+// MOSTRAR/ESCONDER CONVERSAS - CHAT
+const chat = document.querySelector('.chat');
+const headerChat = document.querySelector('.chat-header');
+const iconExpand = document.querySelector('.expand');
+
+function mostrarChat() {
+
+    if(chat.classList.contains('showChat')) {
+        chat.classList.remove('showChat');
+
+        iconExpand.innerText = 'expand_less';
+        
+    } else {
+        chat.classList.add('showChat');
+        iconExpand.innerText = 'expand_more';
+    }
+    
+}
+
+
+headerChat.addEventListener('click', mostrarChat);
