@@ -627,10 +627,8 @@ main .profile-info {
 }
 
 .content a .post-photo {
-    display: flex;
-
-    width: max-content;
-    height: max-content;
+    /* display: flex; */
+    width: 8rem;
 
     padding-right: 1rem;
 
@@ -647,18 +645,6 @@ main .profile-info {
     justify-content: space-between;
 }
 
-
-/* .likes span {
-    font-size: 1.2rem;
-    color: var(--color-secondary);
-    cursor: pointer;
-}
-
-.likes span:hover {
-    text-decoration: underline;
-    color: var(--color-main);
-
-} */
 
 .content .likes {
     display: flex;
@@ -717,8 +703,74 @@ main .profile-info {
 
 
 
-
-
 .border-bottom {
     border-bottom: 0.1rem solid var(--color-line);
+}
+
+
+
+
+/* SEÇÃO EXPERIÊNCIA */
+.content a .company-logo {
+    width: 8rem;
+
+    padding-right: 1rem;
+
+}
+
+.content a .company-logo img {
+    width: 100%;
+}
+
+
+/* Empresa, período de trabalho e local de trabalho */
+.content a .company {
+    color: var(--color-main);
+}
+.content a .company, .job-period, .location {
+    font-size: 1.4rem;
+}
+
+/* Descrição do que faz/fazia no cargo + competências */
+.content a .description, .skills {
+    font-size: 1.4rem;
+    padding: 1rem 0;
+}
+
+
+
+
+/* SEÇÃO FORMAÇÃO ACADÊMICA */
+.content a .course {
+    color: var(--color-main);
+}
+.content a .course, .course-period {
+    font-size: 1.4rem;
+}
+
+
+
+
+/* SEÇÃO LICENÇAS E CERTIFICADOS */
+
+.formation .credential-code {
+    font-size: 1.4rem;
+}
+
+.formation .credential-code {
+    font-size: 1.4rem;
+}
+
+.formation .credential-link {
+    display: flex;
+    align-items: center;
+    color: var(--color-secondary);
+    margin: 1rem 0;
+    gap: 0.5rem;
+}
+
+/* Icon botão - Exibir credencial */
+.formation .credential-link .material-symbols-outlined {
+    font-size: 1.6rem !important;
+    font-weight: bold;
 }
