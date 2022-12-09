@@ -1205,7 +1205,7 @@ video {
     display: none;
     width: 100%;
     height: calc(100vh - 6rem);
-    overflow: auto;
+    overflow: hidden;
 
     border-radius: 0.5rem;
 
@@ -1247,6 +1247,7 @@ video {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    color: var(--color-main);
 }
 
 .modal .modal-header button:hover {
