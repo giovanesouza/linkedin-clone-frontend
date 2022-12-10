@@ -1202,9 +1202,10 @@ video {
 
 /* MODAL INICIAR POSTAGEM */
 .modal {
+    background-color: #000000b4;
     display: none;
     width: 100%;
-    height: calc(100vh - 6rem);
+    height: 100vh;
     overflow: hidden;
 
     border-radius: 0.5rem;
@@ -1213,7 +1214,7 @@ video {
 
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 999;
 }
 
 /* Engloba todo o conteúdo do MODAL */
@@ -1224,6 +1225,7 @@ video {
     margin: 10% auto;
 
     border: 0.1rem solid var(--color-line);
+    border-radius: var(--radius-feed);
     
     width: max-content;
 
@@ -1248,10 +1250,13 @@ video {
     border: none;
     cursor: pointer;
     color: var(--color-main);
+    padding: 0.5rem;
 }
 
 .modal .modal-header button:hover {
-   color: var(--bg-notify);
+   background-color: var(--bg-link-hover);
+   padding: 0.5rem;
+   border-radius: 50%;
 }
 
 
